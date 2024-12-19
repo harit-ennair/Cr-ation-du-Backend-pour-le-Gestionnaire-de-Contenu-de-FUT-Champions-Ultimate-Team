@@ -1,0 +1,476 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+nav.navber {
+  background-color: #1e6520;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbtnadmin{
+width: 100px;
+height: 30px;
+border-radius: 10px;
+}
+
+
+nav.navber .Logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+nav.navber .Logo img {
+  max-width: 120px;
+  margin-right: 10px;
+}
+
+nav.navber .Logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  display: inline-grid;
+  margin: 15px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  box-sizing: border-box;
+  text-align: start;
+}
+
+#positionplayrcontainer {
+  background-image: url(./image/stadium_background.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 1400px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+#substitute {
+  margin: 20px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 520px;
+
+  height: 90vh;
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group,
+.form-group-pl {
+  margin-bottom: 15px;
+}
+
+.form-group label,
+.form-group-pl label {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input,
+.form-group select,
+.form-group-pl input,
+.form-group-pl select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group-pl input:focus,
+.form-group-pl select:focus {
+  border-color: #0073e6;
+  outline: none;
+}
+
+.form-group-pl {
+  display: none;
+}
+
+.form-group-pl input {
+  width: 120px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.actionbtn{
+
+  background-color: #ff721a;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1em;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 5px;
+
+
+}
+
+.actionbtn:hover {
+  background-color: #e46110;
+}
+
+
+
+ 
+#alltabl{
+ display: flex;
+  
+  
+}
+      
+
+
+
+table {
+  /* width: 1449px; */
+  border-collapse: collapse;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  /* padding: 15px; */
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #268029;
+  color: white;
+}
+
+td img {
+  /* width: 50px; */
+  height: auto;
+  border-radius: 5px;
+}
+
+
+tr:hover {
+  background-color: #e3f3ff;
+ 
+}
+
+
+
+
+
+
+#addClub,
+#addNationality,
+#addplayer{
+  width: 100%;
+  padding: 12px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#addplayer:hover {
+  background-color: #005bb5;
+} 
+
+.positionplayr {
+  display: flex;
+  justify-self: center;
+  height: 180px;
+  width: 1100px;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+#attack {
+  justify-self: center;
+  justify-content: space-between;
+  width: 800px;
+}
+
+#defans {
+  justify-self: center;
+  justify-content: space-between;
+}
+
+#form-group-pl-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#CBcard {
+  display: flex;
+  gap: 100px;
+}
+
+.LM {
+  height: 200px;
+  width: 150px;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.LM:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 4px 10px rgb(154, 180, 9));
+}
+
+.card-content {
+  width: 100%;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.player-stats {
+  display: flex;
+  justify-self: center;
+  gap: 6px;
+  font-size: 0.8em;
+}
+
+.player-stats-content {
+  display: flex;
+  justify-self: center;
+  word-spacing: 2px;
+  font-size: 0.5em;
+}
+
+#rayting-pransipal {
+  justify-self: start;
+  margin-top: 45px;
+  margin-left: 20px;
+}
+
+#playerphotocontainr {
+  height: 80px;
+  width: 80px;
+  margin-left: 47px;
+  margin-top: -32px;
+}
+
+#playerphoto {
+  width: 100%;
+}
+
+p {
+  margin: 0px;
+}
+
+select {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+option {
+  padding: 10px;
+}
+
+.flag {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+#photoflagclubcontainr {
+  height: 45px;
+  width: 34px;
+  margin-top: -52px;
+  margin-left: -32px;
+}
+
+#photoclubcontainr,
+#photoflagcontainr {
+  height: 22px;
+  width: 33px;
+}
+
+#clubphoto,
+#flagphoto {
+  width: 80%;
+}
+
+.stat strong {
+  font-weight: bold;
+}
+
+.buttoncontainer {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+.edit {
+  display: none;
+  background: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.edit:hover {
+  transform: scale(1.5);
+}
+
+.delete {
+  background: none;
+  display: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.delete:hover {
+  transform: scale(1.5);
+}
+
+.LM:hover .edit {
+  display: block;
+  background: none;
+}
+
+.LM:hover .delete {
+  display: block;
+  background: none;
+}
+
+@media (max-width: 768px) {
+
+  .main {
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  #positionplayrcontainer {
+    width: 100%;
+    height: auto;
+  }
+
+  #substitute {
+    overflow-x: scroll;
+    display: flex;
+    width: 100%;
+    margin: 10px;
+    height: auto;
+  }
+
+  .player-name {
+    font-size: 0.8em;
+  }
+
+  .player-stats {
+    font-size: 0.7em;
+  }
+
+  .positionplayr {
+    height: 180px;
+    width: 650px;
+  }
+
+  #attack {
+    width: 600px;
+    gap: 10px;
+  }
+
+  #medfild {
+    gap: 10px;
+  }
+
+  #defans {
+    width: 700px;
+    gap: 20px;
+  }
+
+  #CBcard {
+    gap: 20px
+  }
+
+  #positionplayrcontainer {
+    background-position-x: -130px;
+  }
+}
+
+@media (max-width: 425px) {
+
+  #positionplayrcontainer {
+    display: flex;
+    flex-direction: column;
+    background-position-x: -345px;
+    overflow-x: scroll;
+
+  }
+}
