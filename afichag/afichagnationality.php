@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
                 </form>
 
                 <form method='POST' action='editnationality.php'>
-                 <input type='hidden' name='playerID' value='" . $row['nationalityID'] . "'>
+                 <input type='hidden' name='nationalityID' value='" . $row['nationalityID'] . "'>
                 <button type='submit' name='EditnationalityBtn' class='actionbtn'>Edit</button>
                 </form>
 

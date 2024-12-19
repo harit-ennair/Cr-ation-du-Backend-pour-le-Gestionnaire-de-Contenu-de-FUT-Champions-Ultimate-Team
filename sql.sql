@@ -8,15 +8,15 @@ CREATE DATABASE player;
 -- reation de table playerinfornation
 
 
-CREATE TABLE playerinfornation ( 
+CREATE TABLE playerinformation ( 
   playerID INT PRIMARY KEY AUTO_INCREMENT NOT NULL, 
   playerNAME VARCHAR(50) NOT NULL, 
   PhotoURL VARCHAR(255) NOT NULL, 
   Position VARCHAR(50) NOT NULL, 
-  nationalityID INT NOT NULL , 
-  nationalityID FOREIGN KEY (nationalityID) REFERENCES nationalityinformation(nationalityID) , 
-  clubID INT NOT NULL ,  
-  clubID FOREIGN KEY (clubID) REFERENCES clubinformation(clubID) , 
+  nationalityID INT  , 
+  nationalityID FOREIGN KEY (nationalityID) REFERENCES nationalityinformation(nationalityID) on delet set null, 
+  clubID INT  ,  
+  clubID FOREIGN KEY (clubID) REFERENCES clubinformation(clubID) on delet set null , 
   PAC INT NOT NULL, 
   SHO INT NOT NULL, 
   PAS INT NOT NULL, 

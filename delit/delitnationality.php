@@ -7,6 +7,7 @@ if (isset($_POST["nationalityID"]) && isset($_POST["deleteNationalityBtn"])) {
 
     $nationalityID = $_POST["nationalityID"];
     
+    
     $delete_sql = "DELETE FROM nationalityinformation WHERE nationalityID = ?";
     $stmt = $conn->prepare($delete_sql);
     

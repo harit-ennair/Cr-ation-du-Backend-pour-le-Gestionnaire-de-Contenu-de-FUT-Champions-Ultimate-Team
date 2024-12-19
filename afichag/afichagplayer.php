@@ -3,14 +3,13 @@ include 'conex.php';
 
 
 
-
 $sql = "SELECT * 
-FROM playerinformation p
-JOIN clubinformation c ON p.clubID = c.clubID
-JOIN nationalityinformation n ON p.nationalityID = n.nationalityID";
-
+        FROM playerinformation p
+        LEFT JOIN clubinformation c ON p.clubID = c.clubID
+        LEFT JOIN nationalityinformation n ON p.nationalityID = n.nationalityID";
 
 $result = $conn->query($sql);
+
 
 
 if ($result->num_rows > 0) {
@@ -61,7 +60,7 @@ echo "<td><img src='" . $row['nationalityURL'] . "' alt='Nationality Flag' width
 
 echo "<td>
 
-<form method='POST' action='edit.php'>
+<form method='POST' action='editplayer.php'>
    <input type='hidden' name='playerID' value='" . $row['playerID'] . "'>
    <button type='submit' name='EditPlayerBtn' class='actionbtn'>Edit</button>
 </form>
@@ -77,6 +76,11 @@ echo "<td>
 
 
 echo "</tr>";
+
+
+
+
+
 }
 
 
@@ -85,6 +89,24 @@ echo "</table>";
 echo "No players found.";
 }
 
+$sql = "SELECT * 
+        FROM playerinformation p
+        LEFT JOIN clubinformation c ON p.clubID = c.clubID
+        LEFT JOIN nationalityinformation n ON p.nationalityID = n.nationalityID";
 
+$result = $conn->query($sql);
+
+$players = []; // Initialize an empty array
+
+while ($row = $result->fetch_assoc()) {
+    $players[] = $row;
+}
+
+// Encode the data to JSON with pretty print and Unicode support
+$encodedData = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+// Write the JSON data to the file
+file_put_contents("./api.json", '');
+file_put_contents("./api.json", $encodedData);
 
 ?>

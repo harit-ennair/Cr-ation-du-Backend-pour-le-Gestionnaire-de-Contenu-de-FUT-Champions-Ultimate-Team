@@ -23,7 +23,7 @@ if ($result->num_rows > 0) {
                 </form>
 
                  <form method='POST' action='editclub.php'>
-                 <input type='hidden' name='playerID' value='" . $row['clubID'] . "'>
+                 <input type='hidden' name='clubID' value='" . $row['clubID'] . "'>
                 <button type='submit' name='EditclubyBtn' class='actionbtn'>Edit</button>
                 </form>
 

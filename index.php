@@ -139,7 +139,7 @@ try {
                 
                 echo "<td><form method='POST' action=''>
                             <input type='hidden' name='playerID' value='" . $row['playerID'] . "'>
-                            <button type='submit' name='addPlayerBtn' class='actionbtn'>add</button>
+                           
                             <button type='submit' name='addplayerbtn' id='addplayer'>Add player</button>
                          </form></td>";
                 echo "</tr>";
