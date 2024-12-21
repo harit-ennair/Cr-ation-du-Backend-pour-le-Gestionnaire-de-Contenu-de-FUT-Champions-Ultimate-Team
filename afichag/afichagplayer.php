@@ -57,7 +57,7 @@ echo "<td><img src='" . $row['clubURL'] . "' alt='Club Logo' width='50' /></td>"
 
 echo "<td>" . $row['nationalityNAME'] . "</td>";
 echo "<td><img src='" . $row['nationalityURL'] . "' alt='Nationality Flag' width='50' /></td>";
-
+// edit page doit etre effectuer par GET methode, le submit du form par POST 
 echo "<td>
 
 <form method='POST' action='editplayer.php'>
