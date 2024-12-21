@@ -274,7 +274,7 @@ include './delit/delitnationality.php';
 
 // delit club
 include './delit/delitclub.php';
-
+// c'est mieux de separer les trois page, vous allez avoire des problèmes de performance
 ?>
 
 

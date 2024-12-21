@@ -11,7 +11,7 @@
     display: flex">
 
 <?php
-include 'conex.php';  
+include 'conex.php';  // include_once
 
 
 if (isset($_POST["clubID"])) {
@@ -76,7 +76,7 @@ if (isset($_POST['updateClubBtn'])) {
     }
 
     $stmtUpdate->close();
-    eader('Location: indexadmin.php');
+    header('Location: indexadmin.php');
 }
 ?>
 
