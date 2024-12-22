@@ -68,7 +68,7 @@ echo "<td>
 
 <form method='POST' action=''>
    <input type='hidden' name='playerID' value='" . $row['playerID'] . "'>
-   <button type='submit' name='deletePlayerBtn' class='actionbtn'>Delete</button>
+   <button type='submit' name='deletePlayerBtn' class='actionbtnd'>Delete</button>
    
 </form>
 </td>";
@@ -79,8 +79,6 @@ echo "</tr>";
 
 
 
-
-
 }
 
 
@@ -88,6 +86,14 @@ echo "</table>";
 } else {
 echo "No players found.";
 }
+
+
+
+
+
+
+
+
 
 $sql = "SELECT * 
         FROM playerinformation p
@@ -108,5 +114,11 @@ $encodedData = json_encode($players, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE)
 // Write the JSON data to the file
 file_put_contents("./api.json", '');
 file_put_contents("./api.json", $encodedData);
+
+
+
+
+
+$conn->close();
 
 ?>

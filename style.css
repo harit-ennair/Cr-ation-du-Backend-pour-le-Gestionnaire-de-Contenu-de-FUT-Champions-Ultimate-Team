@@ -144,6 +144,26 @@ h1 {
 
 
 
+.actionbtnd{
+
+  background-color: #de0000;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  font-size: 1em;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 5px;
+
+
+}
+
+.actionbtnd:hover {
+  background-color: #ad0000;
+}
 .actionbtn{
 
   background-color: #ff721a;
@@ -191,7 +211,7 @@ th, td {
 }
 
 th {
-  background-color: #268029;
+  background-color: #0073e6;
   color: white;
 }
 

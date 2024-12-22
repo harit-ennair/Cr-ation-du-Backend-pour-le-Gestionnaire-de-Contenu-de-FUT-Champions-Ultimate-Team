@@ -3,7 +3,6 @@ include 'conex.php';
 
 
 
-try {
     if (isset($_POST['name']) && isset($_POST['photo']) && isset($_POST['position']) && isset($_POST['nationality']) && isset($_POST['club'])) {
         
         $name = $_POST['name'];
@@ -46,10 +45,6 @@ try {
 
     }
 
-
-} catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
-}
-
+$conn->close();
 
 ?>

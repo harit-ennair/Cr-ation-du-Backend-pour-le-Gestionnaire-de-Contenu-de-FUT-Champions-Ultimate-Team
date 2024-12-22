@@ -17,15 +17,15 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row['nationalityNAME'] . "</td>";
         echo "<td><img src='" . $row['nationalityURL'] . "' alt='Nationality Flag' width='50' /></td>";
         echo "<td>
+                <form method='POST' action='editnationality.php'>
+                    <input type='hidden' name='nationalityID' value='" . $row['nationalityID'] . "'>
+                    <button type='submit' name='EditnationalityBtn' class='actionbtn'>Edit</button>
+                </form>
                 <form method='POST' action=''>
                     <input type='hidden' name='nationalityID' value='" . $row['nationalityID'] . "'>
-                    <button type='submit' name='deleteNationalityBtn' class='actionbtn'>Delete</button>
+                    <button type='submit' name='deleteNationalityBtn' class='actionbtnd'>Delete</button>
                 </form>
 
-                <form method='POST' action='editnationality.php'>
-                 <input type='hidden' name='nationalityID' value='" . $row['nationalityID'] . "'>
-                <button type='submit' name='EditnationalityBtn' class='actionbtn'>Edit</button>
-                </form>
 
               </td>";
         echo "</tr>";
@@ -34,4 +34,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "No nationalities found.";
 }
+$conn->close();
+
 ?>

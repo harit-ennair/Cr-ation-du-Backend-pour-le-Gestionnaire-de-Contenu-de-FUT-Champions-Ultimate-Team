@@ -17,15 +17,15 @@ if ($result->num_rows > 0) {
         echo "<td>" . $row['clubNAME'] . "</td>";
         echo "<td><img src='" . $row['clubURL'] . "' alt='Club Logo' width='50' /></td>";
         echo "<td>
+                <form method='POST' action='editclub.php'>
+                    <input type='hidden' name='clubID' value='" . $row['clubID'] . "'>
+                    <button type='submit' name='EditclubyBtn' class='actionbtn'>Edit</button>
+                </form>
                 <form method='POST' action=''>
                     <input type='hidden' name='clubID' value='" . $row['clubID'] . "'>
-                    <button type='submit' name='deleteClubBtn' class='actionbtn'>Delete</button>
+                    <button type='submit' name='deleteClubBtn' class='actionbtnd'>Delete</button>
                 </form>
 
-                 <form method='POST' action='editclub.php'>
-                 <input type='hidden' name='clubID' value='" . $row['clubID'] . "'>
-                <button type='submit' name='EditclubyBtn' class='actionbtn'>Edit</button>
-                </form>
 
               </td>";
         echo "</tr>";
@@ -34,4 +34,6 @@ if ($result->num_rows > 0) {
 } else {
     echo "No clubs found.";
 }
+$conn->close();
+
 ?>
